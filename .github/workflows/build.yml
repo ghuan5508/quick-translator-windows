@@ -23,6 +23,17 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
+      - name: Normalize XML encoding
+        shell: pwsh
+        run: |
+          Get-ChildItem .\QuickTranslator -Recurse -File |
+            Where-Object { $_.Extension -in '.xaml', '.csproj' } |
+            ForEach-Object {
+              $path = $_.FullName
+              $text = [IO.File]::ReadAllText($path).TrimStart([char]0xFEFF)
+              [IO.File]::WriteAllText($path, $text, [Text.UTF8Encoding]::new($false))
+            }
+
       - name: Publish self-contained EXE
         run: dotnet publish .\QuickTranslator\QuickTranslator.csproj -c Release -r win-x64 --self-contained true -o .\publish
 
