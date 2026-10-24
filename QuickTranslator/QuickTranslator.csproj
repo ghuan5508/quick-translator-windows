@@ -1,0 +1,18 @@
+﻿﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon></ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
