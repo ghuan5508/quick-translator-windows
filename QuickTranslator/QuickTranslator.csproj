@@ -7,6 +7,7 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon></ApplicationIcon>
     <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <SelfContained>true</SelfContained>
   </PropertyGroup>
   <ItemGroup>
