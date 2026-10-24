@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -42,7 +42,6 @@ namespace QuickTranslator
                 }
                 catch { }
             }
-            catch { }
             
             // 在线翻译失败，使用离线词典
             return TranslateOffline(source);
